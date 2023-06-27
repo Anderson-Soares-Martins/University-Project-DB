@@ -65,13 +65,6 @@ export const Pagamentos = () => {
             value={values.data_pagamento}
             onChange={handleChange}
           />
-          {/* <input
-            type="text"
-            name="comprovante"
-            placeholder="comprovante"
-            value={values.comprovante}
-            onChange={handleChange}
-          /> */}
           <input
             type="text"
             name="ano_referencia"
