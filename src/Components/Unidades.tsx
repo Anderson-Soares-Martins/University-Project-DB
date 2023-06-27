@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { api } from "../lib/axios"
 
 export const Unidades = () => {
@@ -30,8 +30,6 @@ export const Unidades = () => {
 
   return (
     <div>
-      <h1>Pagementos</h1>
-
       <div style={{ margin: "20px 0" }}>
         <h1>Unidade</h1>
 
@@ -55,14 +53,15 @@ export const Unidades = () => {
         </form>
 
         <h2>Visualizacao</h2>
-        {unidades.map((unidade) => (
-          <>
+        {unidades.map((unidade, index) => (
+          <React.Fragment key={unidade.numero_identificador + index}>
             <hr />
-            <div key={unidade.numero_identificador}>
-              <p>{unidade.numero_identificador}</p>
-              <p>{unidade.localizacao}</p>
+            <div>
+              <p>id: {unidade.id}</p>
+              <p>numero_identificador: {unidade.numero_identificador}</p>
+              <p>localizacao: {unidade.localizacao}</p>
             </div>
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>
