@@ -47,7 +47,7 @@ export const Pagamentos = () => {
   return (
     <div>
       <div style={{ margin: "20px 0" }}>
-        <h1>Pagadores</h1>
+        <h1>Pagamentos</h1>
 
         <h2>Formulario</h2>
         <form>
